@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fitbuddy/widgets/nav_bar.dart';
 
 void main() {
   runApp(const FitBuddy());
@@ -64,6 +65,7 @@ class _HomePageState extends State<HomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
+      bottomNavigationBar: const NavBar(text: 'Sample text'),
     );
   }
 }
