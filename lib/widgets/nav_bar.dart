@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
-  const NavBar({super.key});
+  final String text;
+  final VoidCallback onPressed;
+
+  const NavBar({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
+    return TextButton(
+      onPressed: onPressed,
+      child: Text(text),
     );
   }
 }
