@@ -13,6 +13,7 @@ class ScreenManager extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(title)),
+      body: body,
       bottomNavigationBar: const NavBar(text: 'Sample'),
     );
   }
