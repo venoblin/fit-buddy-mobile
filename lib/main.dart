@@ -28,21 +28,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
-      child: Text('Position'),
-    );
-  }
-}
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // title: Text(widget.title),
-      ),
-      body: const Text('HOMEPAGE'),
-      bottomNavigationBar: const NavBar(text: 'Sample text'),
-    );
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(title),
+        ),
+        bottomNavigationBar: const NavBar(text: 'Sample text'));
   }
 }
