@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
-  const NavBar({super.key, required this.text});
-
-  final String text;
-  void onPressed() {}
+  const NavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Text(text),
+    return const Row(
+      children: [
+        Expanded(child: Text('Home')),
+        Expanded(child: Text('Profile')),
+      ],
     );
   }
 }
