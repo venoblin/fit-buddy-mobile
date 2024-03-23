@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
-  final String text;
-
-  void onPressed() {}
-
   const NavBar({super.key, required this.text});
+
+  final String text;
+  void onPressed() {}
 
   @override
   Widget build(BuildContext context) {
