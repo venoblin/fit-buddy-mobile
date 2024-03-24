@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:fitbuddy/widgets/screens/profile_screen.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
-  void goHome() {
+  void goHome(BuildContext context) {
     print('going home');
   }
 
-  void goProfile() {
+  void goProfile(BuildContext context) {
     print('going to profile');
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const ProfileScreen()),
+    );
   }
 
   @override
@@ -16,10 +21,12 @@ class NavBar extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-            child: TextButton(onPressed: goHome, child: const Text('Home'))),
+            child: TextButton(
+                onPressed: () => goHome(context), child: const Text('Home'))),
         Expanded(
-            child:
-                TextButton(onPressed: goProfile, child: const Text('Profile'))),
+            child: TextButton(
+                onPressed: () => goProfile(context),
+                child: const Text('Profile'))),
       ],
     );
   }
