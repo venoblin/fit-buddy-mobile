@@ -24,12 +24,17 @@ class NavBar extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-            child: TextButton(
-                onPressed: () => goToHome(context), child: const Text('Home'))),
+          child: TextButton(
+            onPressed: () => goToHome(context),
+            child: const Text('Home'),
+          ),
+        ),
         Expanded(
-            child: TextButton(
-                onPressed: () => goToProfile(context),
-                child: const Text('Profile'))),
+          child: TextButton(
+            onPressed: () => goToProfile(context),
+            child: const Text('Profile'),
+          ),
+        ),
       ],
     );
   }
