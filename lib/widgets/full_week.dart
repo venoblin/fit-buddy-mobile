@@ -12,8 +12,13 @@ class _FullWeekState extends State<FullWeek> {
   Widget build(BuildContext context) {
     return const Row(
       children: [
+        Text('SUN'),
         Text('MON'),
         Text('TUE'),
+        Text('WED'),
+        Text('THU'),
+        Text('FRI'),
+        Text('SAT'),
       ],
     );
   }
