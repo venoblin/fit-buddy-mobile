@@ -8,17 +8,21 @@ class ExpandedBar extends StatelessWidget {
   List<Widget> createChildren() {
     List<Widget> createdChildren = [];
 
+    for (Widget c in children) {
+      Widget result = Expanded(
+        child: c,
+      );
+
+      createdChildren.add(result);
+    }
+
     return createdChildren;
   }
 
   @override
   Widget build(BuildContext context) {
     return const Row(
-      children: [
-        Expanded(child: Text('Item1')),
-        Expanded(child: Text('Item2')),
-        Expanded(child: Text('Item3')),
-      ],
+      children: [],
     );
   }
 }
