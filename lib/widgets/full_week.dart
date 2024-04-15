@@ -21,7 +21,12 @@ class _FullWeekState extends State<FullWeek> {
         Expanded(
           child: TextButton(
             onPressed: clickPlaceholder,
-            child: const Text('SUN'),
+            child: Column(
+              children: [
+                const Text('SUN'),
+                Text(dayWorkoutAmounts[0].toString()),
+              ],
+            ),
           ),
         ),
         Expanded(
