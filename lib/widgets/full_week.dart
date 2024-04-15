@@ -10,16 +10,18 @@ class FullWeek extends StatefulWidget {
 class _FullWeekState extends State<FullWeek> {
   List<int> dayWorkoutAmounts = [0, 0, 0, 0, 0, 0, 0];
 
+  void clickPlaceholder() {
+    print('click');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
-          child: Column(
-            children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
-            ],
+          child: TextButton(
+            onPressed: clickPlaceholder,
+            child: const Text('SUN'),
           ),
         ),
         Expanded(
