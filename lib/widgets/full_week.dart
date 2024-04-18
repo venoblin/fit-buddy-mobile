@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fitbuddy/widgets/expanded_bar.dart';
 
 class FullWeek extends StatefulWidget {
   const FullWeek({super.key});
@@ -16,66 +17,52 @@ class _FullWeekState extends State<FullWeek> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return ExpandedBar(
       children: [
-        Expanded(
-          child: TextButton(
-            onPressed: clickPlaceholder,
-            child: Column(
-              children: [
-                const Text('SUN'),
-                Text(dayWorkoutAmounts[0].toString()),
-              ],
-            ),
-          ),
-        ),
-        Expanded(
+        TextButton(
+          onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('MON'),
-              Text(dayWorkoutAmounts[1].toString()),
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
             ],
           ),
         ),
-        Expanded(
-          child: Column(
-            children: [
-              const Text('TUE'),
-              Text(dayWorkoutAmounts[2].toString()),
-            ],
-          ),
+        Column(
+          children: [
+            const Text('MON'),
+            Text(dayWorkoutAmounts[1].toString()),
+          ],
         ),
-        Expanded(
-          child: Column(
-            children: [
-              const Text('WED'),
-              Text(dayWorkoutAmounts[3].toString()),
-            ],
-          ),
+        Column(
+          children: [
+            const Text('TUE'),
+            Text(dayWorkoutAmounts[2].toString()),
+          ],
         ),
-        Expanded(
-          child: Column(
-            children: [
-              const Text('THU'),
-              Text(dayWorkoutAmounts[4].toString()),
-            ],
-          ),
+        Column(
+          children: [
+            const Text('WED'),
+            Text(dayWorkoutAmounts[3].toString()),
+          ],
         ),
-        Expanded(
-          child: Column(
-            children: [
-              const Text('FRI'),
-              Text(dayWorkoutAmounts[5].toString()),
-            ],
-          ),
+        Column(
+          children: [
+            const Text('THU'),
+            Text(dayWorkoutAmounts[4].toString()),
+          ],
         ),
-        Expanded(
-          child: Column(
-            children: [
-              const Text('SAT'),
-              Text(dayWorkoutAmounts[6].toString()),
-            ],
-          ),
+        Column(
+          children: [
+            const Text('FRI'),
+            Text(dayWorkoutAmounts[5].toString()),
+          ],
+        ),
+        Column(
+          children: [
+            const Text('SAT'),
+            Text(dayWorkoutAmounts[6].toString()),
+          ],
         ),
       ],
     );
