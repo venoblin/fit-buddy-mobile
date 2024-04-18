@@ -32,8 +32,8 @@ class _FullWeekState extends State<FullWeek> {
           onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              const Text('MON'),
+              Text(dayWorkoutAmounts[1].toString()),
             ],
           ),
         ),
@@ -41,8 +41,8 @@ class _FullWeekState extends State<FullWeek> {
           onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              const Text('TUE'),
+              Text(dayWorkoutAmounts[2].toString()),
             ],
           ),
         ),
@@ -50,8 +50,8 @@ class _FullWeekState extends State<FullWeek> {
           onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              const Text('WED'),
+              Text(dayWorkoutAmounts[3].toString()),
             ],
           ),
         ),
@@ -59,8 +59,8 @@ class _FullWeekState extends State<FullWeek> {
           onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              const Text('THU'),
+              Text(dayWorkoutAmounts[4].toString()),
             ],
           ),
         ),
@@ -68,8 +68,8 @@ class _FullWeekState extends State<FullWeek> {
           onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              const Text('FRI'),
+              Text(dayWorkoutAmounts[5].toString()),
             ],
           ),
         ),
@@ -77,8 +77,8 @@ class _FullWeekState extends State<FullWeek> {
           onPressed: clickPlaceholder,
           child: Column(
             children: [
-              const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              const Text('SAT'),
+              Text(dayWorkoutAmounts[6].toString()),
             ],
           ),
         ),
