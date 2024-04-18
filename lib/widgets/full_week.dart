@@ -18,7 +18,6 @@ class _FullWeekState extends State<FullWeek> {
     'fri': 0,
     'sat': 0
   };
-
   List<TextButton> weekDays = [];
 
   void clickPlaceholder() {
