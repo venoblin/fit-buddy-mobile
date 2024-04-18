@@ -22,23 +22,6 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return Row(
-    //   children: [
-    //     Expanded(
-    //       child: TextButton(
-    //         onPressed: () => goToHome(context),
-    //         child: const Text('Home'),
-    //       ),
-    //     ),
-    //     Expanded(
-    //       child: TextButton(
-    //         onPressed: () => goToProfile(context),
-    //         child: const Text('Profile'),
-    //       ),
-    //     ),
-    //   ],
-    // );
-
     return ExpandedBar(
       children: [
         TextButton(
