@@ -17,8 +17,8 @@ class ExpandedBar extends StatelessWidget {
       createdChildren.add(finalWidget);
     }
 
-    return const Row(
-      children: [...createdChildren],
+    return Row(
+      children: createdChildren,
     );
   }
 }
