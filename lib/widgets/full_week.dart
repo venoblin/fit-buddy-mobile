@@ -9,7 +9,16 @@ class FullWeek extends StatefulWidget {
 }
 
 class _FullWeekState extends State<FullWeek> {
-  List<int> dayWorkoutAmounts = [0, 0, 0, 0, 0, 0, 0];
+  Map dayWorkoutAmounts = {
+    'sun': 0,
+    'mon': 0,
+    'tue': 0,
+    'wed': 0,
+    'thu': 0,
+    'fri': 0,
+    'sat': 0
+  };
+  List<TextButton> weekDays = [];
 
   void clickPlaceholder() {
     print('click');
@@ -24,7 +33,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('SUN'),
-              Text(dayWorkoutAmounts[0].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
@@ -33,7 +42,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('MON'),
-              Text(dayWorkoutAmounts[1].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
@@ -42,7 +51,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('TUE'),
-              Text(dayWorkoutAmounts[2].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
@@ -51,7 +60,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('WED'),
-              Text(dayWorkoutAmounts[3].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
@@ -60,7 +69,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('THU'),
-              Text(dayWorkoutAmounts[4].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
@@ -69,7 +78,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('FRI'),
-              Text(dayWorkoutAmounts[5].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
@@ -78,7 +87,7 @@ class _FullWeekState extends State<FullWeek> {
           child: Column(
             children: [
               const Text('SAT'),
-              Text(dayWorkoutAmounts[6].toString()),
+              Text(0.toString()),
             ],
           ),
         ),
