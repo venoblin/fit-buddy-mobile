@@ -9,7 +9,7 @@ class FullWeek extends StatefulWidget {
 }
 
 class _FullWeekState extends State<FullWeek> {
-  Map dayWorkoutAmounts = {
+  Map<String, int> dayWorkoutAmounts = {
     'sun': 0,
     'mon': 0,
     'tue': 0,
@@ -18,6 +18,7 @@ class _FullWeekState extends State<FullWeek> {
     'fri': 0,
     'sat': 0
   };
+
   List<TextButton> weekDays = [];
 
   void clickPlaceholder() {
