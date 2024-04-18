@@ -28,41 +28,59 @@ class _FullWeekState extends State<FullWeek> {
             ],
           ),
         ),
-        Column(
-          children: [
-            const Text('MON'),
-            Text(dayWorkoutAmounts[1].toString()),
-          ],
+        TextButton(
+          onPressed: clickPlaceholder,
+          child: Column(
+            children: [
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
+            ],
+          ),
         ),
-        Column(
-          children: [
-            const Text('TUE'),
-            Text(dayWorkoutAmounts[2].toString()),
-          ],
+        TextButton(
+          onPressed: clickPlaceholder,
+          child: Column(
+            children: [
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
+            ],
+          ),
         ),
-        Column(
-          children: [
-            const Text('WED'),
-            Text(dayWorkoutAmounts[3].toString()),
-          ],
+        TextButton(
+          onPressed: clickPlaceholder,
+          child: Column(
+            children: [
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
+            ],
+          ),
         ),
-        Column(
-          children: [
-            const Text('THU'),
-            Text(dayWorkoutAmounts[4].toString()),
-          ],
+        TextButton(
+          onPressed: clickPlaceholder,
+          child: Column(
+            children: [
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
+            ],
+          ),
         ),
-        Column(
-          children: [
-            const Text('FRI'),
-            Text(dayWorkoutAmounts[5].toString()),
-          ],
+        TextButton(
+          onPressed: clickPlaceholder,
+          child: Column(
+            children: [
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
+            ],
+          ),
         ),
-        Column(
-          children: [
-            const Text('SAT'),
-            Text(dayWorkoutAmounts[6].toString()),
-          ],
+        TextButton(
+          onPressed: clickPlaceholder,
+          child: Column(
+            children: [
+              const Text('SUN'),
+              Text(dayWorkoutAmounts[0].toString()),
+            ],
+          ),
         ),
       ],
     );
