@@ -20,7 +20,7 @@ class _FullWeekState extends State<FullWeek> {
   };
   List<TextButton> weekDays = [];
 
-  void clickPlaceholder() {
+  void _clickPlaceholder() {
     print('click');
   }
 
@@ -29,7 +29,7 @@ class _FullWeekState extends State<FullWeek> {
     return ExpandedBar(
       children: [
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('SUN'),
@@ -38,7 +38,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('MON'),
@@ -47,7 +47,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('TUE'),
@@ -56,7 +56,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('WED'),
@@ -65,7 +65,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('THU'),
@@ -74,7 +74,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('FRI'),
@@ -83,7 +83,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: clickPlaceholder,
+          onPressed: _clickPlaceholder,
           child: Column(
             children: [
               const Text('SAT'),
