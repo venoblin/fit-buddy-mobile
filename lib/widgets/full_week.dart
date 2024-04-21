@@ -17,7 +17,7 @@ class _FullWeekState extends State<FullWeek> {
     );
   }
 
-  List<TextButton> generateWeekDays(BuildContext context) {
+  List<TextButton> _generateWeekDays(BuildContext context) {
     Map<String, int> dayWorkoutAmounts = {
       'sun': 0,
       'mon': 0,
@@ -47,7 +47,7 @@ class _FullWeekState extends State<FullWeek> {
   @override
   Widget build(BuildContext context) {
     return ExpandedBar(
-      children: generateWeekDays(context),
+      children: _generateWeekDays(context),
     );
   }
 }
