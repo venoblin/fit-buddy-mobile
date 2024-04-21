@@ -10,17 +10,6 @@ class FullWeek extends StatefulWidget {
 }
 
 class _FullWeekState extends State<FullWeek> {
-  Map<String, int> dayWorkoutAmounts = {
-    'sun': 0,
-    'mon': 0,
-    'tue': 0,
-    'wed': 0,
-    'thu': 0,
-    'fri': 0,
-    'sat': 0
-  };
-  List<TextButton> weekDays = [];
-
   void _clickPlaceholder(BuildContext context) {
     Navigator.push(
       context,
@@ -28,74 +17,37 @@ class _FullWeekState extends State<FullWeek> {
     );
   }
 
+  List<TextButton> generateWeekDays(BuildContext context) {
+    Map<String, int> dayWorkoutAmounts = {
+      'sun': 0,
+      'mon': 0,
+      'tue': 0,
+      'wed': 0,
+      'thu': 0,
+      'fri': 0,
+      'sat': 0
+    };
+    List<TextButton> weekDays = [];
+
+    for (String day in dayWorkoutAmounts.keys) {
+      TextButton newDayBtn = TextButton(
+        onPressed: () => _clickPlaceholder(context),
+        child: Column(children: [
+          Text(day.toUpperCase()),
+          Text(dayWorkoutAmounts[day].toString()),
+        ]),
+      );
+
+      weekDays.add(newDayBtn);
+    }
+
+    return weekDays;
+  }
+
   @override
   Widget build(BuildContext context) {
     return ExpandedBar(
-      children: [
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('SUN'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('MON'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('TUE'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('WED'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('THU'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('FRI'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-        TextButton(
-          onPressed: () => _clickPlaceholder(context),
-          child: Column(
-            children: [
-              const Text('SAT'),
-              Text(0.toString()),
-            ],
-          ),
-        ),
-      ],
+      children: generateWeekDays(context),
     );
   }
 }
