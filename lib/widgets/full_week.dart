@@ -33,7 +33,7 @@ class _FullWeekState extends State<FullWeek> {
       TextButton newDayBtn = TextButton(
         onPressed: () => _dayOnPress(context, day),
         child: Column(children: [
-          Text(day.toUpperCase()),
+          Text(day.substring(0, 3).toUpperCase()),
           Text(dayWorkoutAmounts[day].toString()),
         ]),
       );
