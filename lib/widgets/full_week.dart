@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitbuddy/widgets/expanded_bar.dart';
+import 'package:fitbuddy/widgets/screens/day_screen.dart';
 
 class FullWeek extends StatefulWidget {
   const FullWeek({super.key});
@@ -20,8 +21,11 @@ class _FullWeekState extends State<FullWeek> {
   };
   List<TextButton> weekDays = [];
 
-  void _clickPlaceholder() {
-    print('click');
+  void _clickPlaceholder(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const DayScreen()),
+    );
   }
 
   @override
@@ -29,7 +33,7 @@ class _FullWeekState extends State<FullWeek> {
     return ExpandedBar(
       children: [
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('SUN'),
@@ -38,7 +42,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('MON'),
@@ -47,7 +51,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('TUE'),
@@ -56,7 +60,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('WED'),
@@ -65,7 +69,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('THU'),
@@ -74,7 +78,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('FRI'),
@@ -83,7 +87,7 @@ class _FullWeekState extends State<FullWeek> {
           ),
         ),
         TextButton(
-          onPressed: _clickPlaceholder,
+          onPressed: () => _clickPlaceholder(context),
           child: Column(
             children: [
               const Text('SAT'),
