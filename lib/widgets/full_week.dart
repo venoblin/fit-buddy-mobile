@@ -10,28 +10,28 @@ class FullWeek extends StatefulWidget {
 }
 
 class _FullWeekState extends State<FullWeek> {
-  void _dayOnPress(BuildContext context) {
+  void _dayOnPress(BuildContext context, String day) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const DayScreen()),
+      MaterialPageRoute(builder: (context) => DayScreen(day: day)),
     );
   }
 
   List<TextButton> _generateWeekDays(BuildContext context) {
     Map<String, int> dayWorkoutAmounts = {
-      'sun': 0,
-      'mon': 0,
-      'tue': 0,
-      'wed': 0,
-      'thu': 0,
-      'fri': 0,
-      'sat': 0
+      'sunday': 0,
+      'monday': 0,
+      'tuesday': 0,
+      'wednesday': 0,
+      'thursday': 0,
+      'friday': 0,
+      'saturday': 0
     };
     List<TextButton> weekDays = [];
 
     for (String day in dayWorkoutAmounts.keys) {
       TextButton newDayBtn = TextButton(
-        onPressed: () => _dayOnPress(context),
+        onPressed: () => _dayOnPress(context, day),
         child: Column(children: [
           Text(day.toUpperCase()),
           Text(dayWorkoutAmounts[day].toString()),
