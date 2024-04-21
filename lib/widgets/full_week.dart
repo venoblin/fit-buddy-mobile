@@ -10,7 +10,7 @@ class FullWeek extends StatefulWidget {
 }
 
 class _FullWeekState extends State<FullWeek> {
-  void _clickPlaceholder(BuildContext context) {
+  void _dayOnPress(BuildContext context) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const DayScreen()),
@@ -31,7 +31,7 @@ class _FullWeekState extends State<FullWeek> {
 
     for (String day in dayWorkoutAmounts.keys) {
       TextButton newDayBtn = TextButton(
-        onPressed: () => _clickPlaceholder(context),
+        onPressed: () => _dayOnPress(context),
         child: Column(children: [
           Text(day.toUpperCase()),
           Text(dayWorkoutAmounts[day].toString()),
