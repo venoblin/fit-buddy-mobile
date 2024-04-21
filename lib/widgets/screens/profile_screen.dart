@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fitbuddy/widgets/screens/screen_manager.dart';
 
-class ProfileScreen extends ScreenManager {
+class ProfileScreen extends StatelessScreen {
   const ProfileScreen({super.key})
       : super(
           body: const Center(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fitbuddy/widgets/nav_bar.dart';
 
-class ScreenManager extends StatelessWidget {
-  const ScreenManager({super.key, required this.body, required this.title});
+class StatelessScreen extends StatelessWidget {
+  const StatelessScreen({super.key, required this.body, required this.title});
 
   final Widget body;
   final String title;
