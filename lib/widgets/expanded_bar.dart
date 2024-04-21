@@ -5,8 +5,7 @@ class ExpandedBar extends StatelessWidget {
 
   final List<Widget> children;
 
-  @override
-  Widget build(BuildContext context) {
+  List<Widget> _generateChildren() {
     List<Widget> createdChildren = [];
 
     for (Widget c in children) {
@@ -17,8 +16,13 @@ class ExpandedBar extends StatelessWidget {
       createdChildren.add(finalWidget);
     }
 
+    return createdChildren;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Row(
-      children: createdChildren,
+      children: _generateChildren(),
     );
   }
 }
