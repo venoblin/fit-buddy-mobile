@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fitbuddy/widgets/screens/screen_manager.dart';
 
-class DayScreen extends StatefulWidget {
-  const DayScreen({super.key});
-
-  @override
-  State<DayScreen> createState() => _DayScreenState();
-}
-
-class _DayScreenState extends State<DayScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Text("DAYSCREEN"),
-      ],
-    );
-  }
+class DayScreen extends Screen {
+  const DayScreen({super.key})
+      : super(
+          body: const Text("DAY SCREEN"),
+          title: 'Day',
+        );
 }
